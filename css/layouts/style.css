@@ -1,0 +1,8 @@
+.pure-img-responsive:hover {
+	background: red;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
