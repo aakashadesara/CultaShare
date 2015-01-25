@@ -3,9 +3,9 @@ $( document ).ready(function() {
     
     var country;
 	
-	$("#upload").click(function(e){
-		 e.preventDefault();
-		var validCountries = ["America", "Mexico", "China", "India", "Japan", "Britain", "Algeria", "Russia", "Greece", "Australlia" ];
+	$("#upload").submit(function(event){
+		event.preventDefault();
+		var validCountries = ["America", "Mexico", "China", "India", "Japan", "Britain", "France", "Russia", "Greece", "Australlia" ];
 		var validCols = ["food", "manners", "recreation", "beliefs", "appearance"];
 
 		var countryName = $("#country").val();
@@ -27,7 +27,6 @@ $( document ).ready(function() {
 		}
 
 		if(isValidCols && isValidCountry){
-
 			var Extension = Parse.Object.extend(countryName);
 			country = new Extension();
 
