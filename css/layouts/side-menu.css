@@ -15,10 +15,18 @@ body {
 
 .pure-u-1-4 img {
     opacity: 0.6;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0;
 }
 
 .pure-u-1-4 img:hover {
     opacity: 1;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0;
 }
 
 #descDiv {
@@ -140,6 +148,10 @@ appears on the left side of the page.
      #menu .pure-menu ul {
         border: none;
         background: transparent;
+        -webkit-transition-property: all;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0;
     }
 
     /*
@@ -148,6 +160,10 @@ appears on the left side of the page.
     #menu .pure-menu ul,
     #menu .pure-menu .menu-item-divided {
         border-top: 1px solid #333;
+        -webkit-transition-property: all;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0;
     }
         /*
         Change color of the anchor links on hover/focus.
@@ -155,6 +171,10 @@ appears on the left side of the page.
         #menu .pure-menu li a:hover,
         #menu .pure-menu li a:focus {
             background: #333;
+            -webkit-transition-property: all;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0;
         }
 
     /*

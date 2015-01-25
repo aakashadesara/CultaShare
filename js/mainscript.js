@@ -20,6 +20,8 @@ $( document ).ready(function() {
 });
 
 function rewind(country){
+		
+
 	var div = document.getElementById('imageHolder');
 	div.innerHTML = "";
 
