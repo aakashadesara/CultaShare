@@ -5,10 +5,10 @@ $( document ).ready(function() {
 	
 	$("#upload").click(function(){
 
-		var validCountries = ["america", "mexico", "china", "india", "japan", "britain", "france", "russia", "greece", "australlia" ];
+		var validCountries = ["America", "Mexico", "China", "India", "Japan", "Britain", "France", "Russia", "Greece", "Australlia" ];
 		var validCols = ["food", "manners", "recreation", "beliefs", "appearance"];
 
-		var countryName = $("#country").val().toLowerCase();
+		var countryName = $("#country").val();
 		var col = $("#col").val().toLowerCase();
 		var link = $("#link").val();
 		var description = $("#description").val();
@@ -27,7 +27,7 @@ $( document ).ready(function() {
 		}
 
 		if(isValidCols && isValidCountry){
-			var Extension = Parse.Object.extend(countryName.toLowerCase());
+			var Extension = Parse.Object.extend(countryName);
 			country = new Extension();
 
 			country.save({foo: col}).then(function(object) {
