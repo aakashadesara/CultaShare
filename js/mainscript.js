@@ -56,7 +56,7 @@ function rewind(country){
 	            //alert(link);
 
             	var div = document.getElementById('imageHolder');
-				div.innerHTML += "<div class =\"pure-grid\">><div class=\"pure-u-1-4\" ><img class=\"pure-img-responsive\" src=\"" + link + " alt=\"Image\"><div id=\"descDiv\" > <p style=\"text-align: center;\">" + description + "</p></div></div></div>";
+				div.innerHTML += "<div class =\"pure-grid\"><div class=\"pure-u-1-4\" ><img class=\"pure-img-responsive\" src=\"" + link + " alt=\"Image\"><div id=\"descDiv\" > <p style=\"text-align: center;\">" + description + "</p></div></div></div>";
 			
 	        }
 
@@ -114,7 +114,7 @@ function rewindButton(country, specification){
 
 	            if(col == specification){
 	           	 	var div = document.getElementById('imageHolder');
-					div.innerHTML += "<div class=\"pure-u-1-4\" ><img class=\"pure-img-responsive\" src=\"" + link + " alt=\"Image\"><div id=\"descDiv\" > <p style=\"text-align: center;\">" + description + "</p></div></div>";
+	           	 	div.innerHTML += "<div class =\"pure-grid\"><div class=\"pure-u-1-4\" ><img class=\"pure-img-responsive\" src=\"" + link + " alt=\"Image\"><div id=\"descDiv\" > <p style=\"text-align: center;\">" + description + "</p></div></div></div>";
 				}
 	        }
 	        document.getElementById("buttonHolders").innerHTML = " <button class=\"button-success pure-button\" class=\"narrowDown\" id=\"all\" style=\"margin: 5px\" >All</button>";
