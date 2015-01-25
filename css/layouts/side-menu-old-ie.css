@@ -122,10 +122,7 @@ appears on the left side of the page.
 #menu .pure-menu ul {
     border: none;
     background: transparent;
-    -webkit-transition-property: all;
-    -webkit-transition-duration: 0.5s;
-    -webkit-transition-timing-function: linear;
-    -webkit-transition-delay: 0;
+    
 }
 
 /*
