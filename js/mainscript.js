@@ -11,7 +11,7 @@ $( document ).ready(function() {
     $("#india").click(function(){ country = "India"; rewind(country); });
     $("#japan").click(function(){ country = "Japan"; rewind(country); });
     $("#britain").click(function(){ country = "Britain"; rewind(country); });
-    $("#algeria").click(function(){ country = "Algeria"; rewind(country); });
+    $("#france").click(function(){ country = "France"; rewind(country); });
     $("#russia").click(function(){ country = "Russia"; rewind(country); });
     $("#greece").click(function(){ country = "Greece"; rewind(country); });
     $("#australlia").click(function(){ country = "Australlia"; rewind(country); });
