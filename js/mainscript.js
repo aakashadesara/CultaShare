@@ -3,6 +3,8 @@ $( document ).ready(function() {
     
     var country = "America";
 
+
+
     $("#america").click(function(){ country = "America"; rewind(country); });
     $("#mexico").click(function(){ country = "Mexico"; rewind(country); });
     $("#china").click(function(){ country = "China"; rewind(country); });
@@ -29,7 +31,7 @@ function rewind(country){
 	var queryObject = new Parse.Query(Client);
 
 	queryObject.find({
-	    success: function (results) {
+	    success: function (results, specification) {
 	        for (var i = 0; i < results.length; i++) {
 	            /* alert("Foo:  " + results[i].get("foo")+ "\n" + 
 	            	  "Link: " + results[i].get("link") + "\n" +
@@ -52,19 +54,22 @@ function rewind(country){
 	            //alert(link);
 
 
-
-	            var div = document.getElementById('imageHolder');
-				div.innerHTML += "<div class=\"pure-u-1-4\" ><img class=\"pure-img-responsive\" src=\"" + link + " alt=\"Image\"><div id=\"descDiv\" > <p style=\"text-align: center;\">" + description + "</p></div></div>";
-
+	            if(specification == "all" || specification == buttonList[i]){
+	            	var div = document.getElementById('imageHolder');
+					div.innerHTML += "<div class=\"pure-u-1-4\" ><img class=\"pure-img-responsive\" src=\"" + link + " alt=\"Image\"><div id=\"descDiv\" > <p style=\"text-align: center;\">" + description + "</p></div></div>";
+				}
 	        }
 	        document.getElementById("buttonHolders").innerHTML = " <button class=\"button-success pure-button\" class=\"narrowDown\" id=\"all\" style=\"margin: 5px\" >All</button>";
 	        for(var i = 0; i < buttonList.length; i++){
 		 		document.getElementById("buttonHolders").innerHTML += "<button class=\"button-success pure-button\" class=\"narrowDown\" id=\""+buttonList[i]+"\" style=\"margin: 5px\" >" + buttonList[i] + "</button>";
 		 	}
 
+		 	$("#all").click(function(){ rewind(country); });
 		 	$("#food").click(function(){ rewindButton(country, "food"); });
 		 	$("#manners").click(function(){ rewindButton(country, "manners"); });
 		 	$("#recreation").click(function(){ rewindButton(country, "recreation"); });
+		 	$("#beliefs").click(function(){ rewindButton(country, "beliefs"); });
+		 	$("#appearance").click(function(){ rewindButton(country, "appearance"); });
 
 	    },
 	    error: function (error) {
@@ -115,11 +120,13 @@ function rewindButton(country, specification){
 	        for(var i = 0; i < buttonList.length; i++){
 		 		document.getElementById("buttonHolders").innerHTML += "<button class=\"button-success pure-button\" class=\"narrowDown\" id=\""+buttonList[i]+"\" style=\"margin: 5px\" >" + buttonList[i] + "</button>";
 		 	}
-
-		 	$("#all").click(function(){ rewind(country); });
+			
+			$("#all").click(function(){ rewind(country); });
 		 	$("#food").click(function(){ rewindButton(country, "food"); });
 		 	$("#manners").click(function(){ rewindButton(country, "manners"); });
 		 	$("#recreation").click(function(){ rewindButton(country, "recreation"); });
+		 	$("#beliefs").click(function(){ rewindButton(country, "beliefs"); });
+		 	$("#appearance").click(function(){ rewindButton(country, "appearance"); });
 
 	    },
 	    error: function (error) {
@@ -128,4 +135,4 @@ function rewindButton(country, specification){
 	});
 
 	
-}
+} 
