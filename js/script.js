@@ -10,8 +10,8 @@ $( document ).ready(function() {
 
 		var countryName = $("#country").val();
 		var col = $("#col").val().toLowerCase();
-		var link = $("#link").val();
-		var description = $("#description").val();
+		var linkVal = $("#link").val();
+		var descriptionVal = $("#description").val();
 
 		var isValidCountry = false;
 		var isValidCols = true;
@@ -32,9 +32,9 @@ $( document ).ready(function() {
 
 			country.save({foo: col}).then(function(object) {
 			});
-			country.save({link: link}).then(function(object) {
+			country.save({link: linkVal}).then(function(object) {
 			});
-			country.save({description: description}).then(function(object) {
+			country.save({description: descriptionVal}).then(function(object) {
 			});
 		} else {
 			alert("Nope. Check country and col");
