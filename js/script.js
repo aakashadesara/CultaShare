@@ -26,7 +26,7 @@ $( document ).ready(function() {
 			}
 		}
 
-		//if(isValidCols && isValidCountry){
+		if(isValidCols && isValidCountry){
 			var Extension = Parse.Object.extend(countryName);
 			country = new Extension();
 
@@ -36,9 +36,9 @@ $( document ).ready(function() {
 			});
 			country.save({description: description}).then(function(object) {
 			});
-		/*} else {
+		} else {
 			alert("Nope. Check country and col");
-		}*/
+		}
 	});
 
 });
